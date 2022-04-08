@@ -1,4 +1,5 @@
 import s from "./Statistics.module.css";
+import getRandomHexColor from "components/util/RandomHexColor";
 
 import PropTypes from "prop-types";
 
@@ -9,7 +10,7 @@ const Statistics = (props) => {
     <section className={s.statistics}>
       {title ? <h2 className={s.title}>Upload stats</h2> : ""}
       <ul className={s.list}>
-        <li className={s.item}>
+        <li className={s.item} style={{ backgroundColor: getRandomHexColor() }}>
           <span className={s.label}>.docx</span>
           <span className={s.percentage}>4%</span>
         </li>
