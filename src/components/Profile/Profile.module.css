@@ -1,13 +1,22 @@
 .wrapper {
   display: flex;
-  background-color: aqua;
+  background-color: #ffffff;
+  width: 200px;
+  height: 400px;
 }
 p {
   color: black;
-  font-weight: 14px;
+  font-size: 14px;
 }
 .avatar {
   height: 145px;
   width: 145px;
   border-radius: 50%;
+}
+.stats {
+  display: flex;
+}
+.item {
+  display: flex;
+  flex-direction: column;
 }
