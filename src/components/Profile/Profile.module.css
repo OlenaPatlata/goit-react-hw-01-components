@@ -4,4 +4,10 @@
 }
 p {
   color: black;
+  font-weight: 14px;
+}
+.avatar {
+  height: 145px;
+  width: 145px;
+  border-radius: 50%;
 }
