@@ -1,6 +1,15 @@
+body {
+  font-family: "Comforter Brush", "Roboto", "Verdana", "Tahoma", sans-serif;
+}
 ul {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 img {
   display: block;
+}
+p {
+  padding: 0;
+  margin: 0;
 }

@@ -1,5 +1,3 @@
-import user from "db/user";
-
 import s from "./Profile.module.css";
 import PropTypes from "prop-types";
 
