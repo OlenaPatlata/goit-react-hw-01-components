@@ -3,7 +3,6 @@ import Profile from "components/Profile/Profile";
 import Statistics from "components/Statistics/Statistics";
 
 import user from "db/user";
-import data from "db/data";
 
 const Main = () => {
   return (
@@ -16,7 +15,7 @@ const Main = () => {
           avatar={user.avatar}
           stats={user.stats}
         />
-        <Statistics title={"Upload stats"} stats={data} />
+        {/* <Statistics title={"Upload stats"} /> */}
       </div>
     </>
   );
