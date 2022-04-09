@@ -1,9 +1,10 @@
 import Profile from "components/Profile/Profile";
-import Statistics from "components/Statistics/Statistics";
+import List from "components/List/List";
 import Section from "components/Section/Section";
 
 import user from "db/user";
 import data from "db/data";
+import friends from "db/friends";
 
 const Main = () => {
   return (
@@ -18,7 +19,10 @@ const Main = () => {
         />
       </Section>
       <Section title="Upload stats">
-        <Statistics array={data} />
+        <List array={data} direction={true} />
+      </Section>
+      <Section>
+        <List array={friends} direction={false} />
       </Section>
     </>
   );
