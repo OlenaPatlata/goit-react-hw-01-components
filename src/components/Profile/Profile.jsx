@@ -5,7 +5,7 @@ const Profile = (props) => {
   const { username, tag, location, avatar, stats } = props;
 
   return (
-    <div className={s.wrapper}>
+    <>
       <div className={s.description}>
         <img src={avatar} alt={username} className={s.avatar} />
         <p className={s.username}>{username}</p>
@@ -26,7 +26,7 @@ const Profile = (props) => {
           <span className={s.quantity}>{stats.likes}</span>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 
@@ -35,13 +35,11 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(
-    PropTypes.shape({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }).isRequired
-  ),
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;

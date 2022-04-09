@@ -5,7 +5,6 @@ function App() {
   return (
     <>
       <Main />
-      {/* <h1>Hello!!!</h1> */}
     </>
   );
 }
