@@ -21,9 +21,9 @@ const Main = () => {
       <Section title="Upload stats">
         <List array={data} direction={true} />
       </Section>
-      <Section>
+      {/* <Section>
         <List array={friends} direction={false} />
-      </Section>
+      </Section> */}
     </>
   );
 };

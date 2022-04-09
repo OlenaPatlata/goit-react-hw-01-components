@@ -1,6 +1,5 @@
 import s from "./List.module.css";
 import ItemStatistics from "components/ItemStatistics/ItemStatistics";
-import getRandomHexColor from "components/util/RandomHexColor";
 
 import PropTypes from "prop-types";
 
@@ -10,16 +9,11 @@ const List = (props) => {
     <ul className={direction ? s.row : s.column}>
       {array.map((object) => {
         return (
-          <li
+          <ItemStatistics
             key={object.id}
-            className={s.item}
-            style={{ backgroundColor: getRandomHexColor() }}
-          >
-            <ItemStatistics
-              label={object.label}
-              percentage={object.percentage}
-            />
-          </li>
+            label={object.label}
+            percentage={object.percentage}
+          />
         );
       })}
     </ul>
