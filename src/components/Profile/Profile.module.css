@@ -32,7 +32,7 @@ p:not(:last-child) {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   width: 100px;
   height: 100px;
-  background-color: rgb(230, 240, 237);
+  background-color: rgb(209, 225, 220);
 }
 .item:last-child {
   border-bottom-right-radius: 5px;

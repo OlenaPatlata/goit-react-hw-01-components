@@ -1,5 +1,6 @@
 import s from "./List.module.css";
 import ItemStatistics from "components/ItemStatistics/ItemStatistics";
+import ItemFriends from "components/ItemFriends/ItemFriends";
 
 import PropTypes from "prop-types";
 
@@ -8,13 +9,12 @@ const List = (props) => {
   return (
     <ul className={direction ? s.row : s.column}>
       {array.map((object) => {
-        return (
-          <ItemStatistics
-            key={object.id}
-            label={object.label}
-            percentage={object.percentage}
-          />
-        );
+        if (direction) {
+          return <ItemStatistics key={object.id} object={object} />;
+        }
+        if (!direction) {
+          return <ItemFriends key={object.id} object={object} />;
+        }
       })}
     </ul>
   );
@@ -22,8 +22,8 @@ const List = (props) => {
 
 List.propTypes = {
   array: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired
-  ),
+    PropTypes.shape({ id: PropTypes.node.isRequired }).isRequired
+  ).isRequired,
   direction: PropTypes.bool.isRequired,
 };
 
