@@ -10,11 +10,7 @@
 .item:not(:last-child) {
   margin-bottom: 15px;
 }
-/* .status {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-} */
+
 .online {
   width: 20px;
   height: 20px;

@@ -4,17 +4,62 @@ import ItemFriends from "components/ItemFriends/ItemFriends";
 
 import PropTypes from "prop-types";
 
+// const List = (props) => {
+//   const { array = [], direction } = props;
+//   return (
+//     <ul className={direction ? s.row : s.column}>
+//       {array.map((object) => {
+//         if (direction) {
+//           return <ItemStatistics key={object.id} object={object} />;
+//         }
+//         if (!direction) {
+//           return <ItemFriends key={object.id} object={object} />;
+//         }
+//       })}
+//     </ul>
+//   );
+// };
+
+// const List = (props) => {
+//   const { array = [], direction } = props;
+//   return (
+//     <ul className={direction ? s.row : s.column}>
+//       {array.map((object) => {
+//         return direction ? (
+//           <ItemStatistics key={object.id} object={object} />
+//         ) : (
+//           <ItemFriends key={object.id} object={object} />
+//         );
+//       })}
+//     </ul>
+//   );
+// };
+
+// const List = (props) => {
+//   const { array = [], direction } = props;
+//   return (
+//     <ul className={direction ? s.row : s.column}>
+//       {direction
+//         ? array.map((object) => {
+//             return <ItemStatistics key={object.id} object={object} />;
+//           })
+//         : array.map((object) => {
+//             return <ItemFriends key={object.id} object={object} />;
+//           })}
+//     </ul>
+//   );
+// };
+
 const List = (props) => {
   const { array = [], direction } = props;
   return (
     <ul className={direction ? s.row : s.column}>
       {array.map((object) => {
-        if (direction) {
-          return <ItemStatistics key={object.id} object={object} />;
-        }
-        if (!direction) {
-          return <ItemFriends key={object.id} object={object} />;
-        }
+        return direction ? (
+          <ItemStatistics key={object.id} object={object} />
+        ) : (
+          <ItemFriends key={object.id} object={object} />
+        );
       })}
     </ul>
   );
